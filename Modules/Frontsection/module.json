@@ -1,0 +1,13 @@
+{
+    "name": "Frontsection",
+    "alias": "frontsection",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Frontsection\\Providers\\FrontsectionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

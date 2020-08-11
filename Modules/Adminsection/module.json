@@ -1,0 +1,13 @@
+{
+    "name": "Adminsection",
+    "alias": "adminsection",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Adminsection\\Providers\\AdminsectionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
