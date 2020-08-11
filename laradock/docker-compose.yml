@@ -448,6 +448,8 @@ services:
         - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
       ports:
         - "${MYSQL_PORT}:3306"
+      security_opt:
+        - seccomp:unconfined
       networks:
         - backend
 
