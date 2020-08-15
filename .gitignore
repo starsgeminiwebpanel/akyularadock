@@ -12,3 +12,4 @@ yarn-error.log
 !/laradock
 !/Modules
 !modules_statuses.json
+/laradock/logs/
