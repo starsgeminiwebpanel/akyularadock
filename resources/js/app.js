@@ -19,6 +19,7 @@ import router  from './routes/routes'
 //import './routes/routerGuards'
 
 import 'es6-promise/auto';
+
 //ue.use(VueRouter)
 Vue.use(VueMaterial)
 //Vue.use(axios)

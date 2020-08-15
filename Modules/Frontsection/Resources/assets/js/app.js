@@ -10,6 +10,8 @@ import '../../../../../node_modules/vue-material/dist/vue-material.min.css'
 import '../../../../../node_modules/vue-material/dist/theme/default.css'
 import FrontRouters from "./routes/routes";
 
+import store from './stores/vuex'
+import 'es6-promise/auto';
 
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
@@ -39,6 +41,7 @@ const frontsectionapp = new Vue ({
        Header,
        Footer
    },
-    router: routerFront
+    router: routerFront,
+    store,
 });
 
