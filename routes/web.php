@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,8 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+/*
+Route::prefix('frontsection')->group(function() {
+    //Route::get('frontendmain', 'FrontsectionController@index');
+});
+*/
+// Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+// Route::get('/testindex', 'TestController@index')->name('testindex');

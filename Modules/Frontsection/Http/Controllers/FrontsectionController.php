@@ -76,4 +76,8 @@ class FrontsectionController extends Controller
     {
         //
     }
+
+    public function main(){
+        return "module frontsection main part";
+    }
 }

@@ -69,6 +69,11 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+
+                    <div id="app">
+                        <App> </App>
+                    </div>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -83,13 +88,6 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-                <div id="app">
-                <App></App>
-
-                <passport-clients></passport-clients>
-<passport-authorized-clients></passport-authorized-clients>
-<passport-personal-access-tokens></passport-personal-access-tokens>
-                </div>
 <!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
@@ -102,6 +100,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div> -->
             </div>
+
         </div>
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>

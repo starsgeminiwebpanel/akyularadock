@@ -14,3 +14,7 @@
 Route::prefix('frontsection')->group(function() {
     Route::get('/', 'FrontsectionController@index');
 });
+
+Route::prefix('frontendmain')->group(function() {
+    Route::get('/', 'FrontsectionController@main');
+});

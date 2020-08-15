@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::get('/v1/cars', function (Request $request) {return 'From the server: details of two cars';});
+// Route::middleware('auth:api')->get('/v1/cars', function (Request $request) {return response()->json([ 'cars'=> [ 'registration'=> 'ABC001', 'dateRegistered'=> '2019-01-01', 'color'=> 'black', 'make'=> 'tesla', 'model'=> 's']], 200);});
+Route::middleware(['auth:api'])->get('/v1/cars', 'TestController@get');
+Route::get('/v1/isauth', 'TestController@isauth'); // remove
+

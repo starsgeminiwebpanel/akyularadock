@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="{{ url('frontsection') }}">Fronsection</a>
+                    <a href="{{ url('frontendmain') }}">Front main</a>
+                    <a href="{{ url('emptylink') }}">Empty Link</a>
+
+
                 </div>
             </div>
         </div>
