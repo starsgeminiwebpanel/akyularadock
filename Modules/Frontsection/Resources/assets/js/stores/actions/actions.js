@@ -6,6 +6,10 @@ export const incrementBy = context => {
     context.commit('incrementBy')
 }
 
+export const getinfo = ({dispatch,commit}) => {
+    commit('getinfo')
+}
+
 export const calculate = ({ dispatch, commit, getters, rootGetters }) => {
     /*
     getters.someGetter // -> 'foo/someGetter'

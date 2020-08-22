@@ -26,6 +26,14 @@ const frontroutes = [
     {
         path:'/header',
         component: Header
+    },
+    {
+        path:'/users',
+        component : Footer
+    },
+    {
+        path:'/saveuser',
+        component: Footer
     }
 ];
 

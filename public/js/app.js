@@ -195,15 +195,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************************!*\
   !*** ./Modules/Frontsection/Resources/assets/js/pages/Footer.vue ***!
   \*******************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer_vue_vue_type_template_id_33c5f157___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=33c5f157& */ "./Modules/Frontsection/Resources/assets/js/pages/Footer.vue?vue&type=template&id=33c5f157&");
 /* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./Modules/Frontsection/Resources/assets/js/pages/Footer.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -233,7 +232,7 @@ component.options.__file = "Modules/Frontsection/Resources/assets/js/pages/Foote
 /*!********************************************************************************************!*\
   !*** ./Modules/Frontsection/Resources/assets/js/pages/Footer.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -400,6 +399,12 @@ var frontroutes = [{
 }, {
   path: '/header',
   component: _pages_Header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  path: '/users',
+  component: _pages_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: '/saveuser',
+  component: _pages_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (frontroutes);
 /*
@@ -3566,9 +3571,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
-var _createNamespacedHelp = Object(vuex__WEBPACK_IMPORTED_MODULE_0__["createNamespacedHelpers"])('frontDetails'),
+var _createNamespacedHelp = Object(vuex__WEBPACK_IMPORTED_MODULE_0__["createNamespacedHelpers"])('frontMain'),
     mapState = _createNamespacedHelp.mapState,
     mapActions = _createNamespacedHelp.mapActions,
     mapMutations = _createNamespacedHelp.mapMutations,
@@ -3585,7 +3594,8 @@ import { mapGetters } from 'vuex'
   name: 'Footer',
   data: function data() {
     return {
-      localCount: 1
+      localCount: 1,
+      info: null
     };
   },
   computed: _objectSpread(_objectSpread(_objectSpread({}, mapState({
@@ -3595,18 +3605,34 @@ import { mapGetters } from 'vuex'
     },
     // passing the string value 'count' is same as `state => state.count`
     countAlias: 'count',
+    users: function users(state) {
+      return state.users;
+    },
+    user: function user(state) {
+      return state.user;
+    },
+    saveUserResponse: function saveUserResponse(state) {
+      return state.saveUserResponse;
+    },
     countPlusLocalState: function countPlusLocalState(state) {
       return state.count + this.localCount;
     }
-  })), mapGetters(['doneTodos', 'doneTodosCount', 'getTodoById'])), mapGetters({
+  })), mapGetters(['doneTodos', 'doneTodosCount', 'getTodoById', 'saveUser'])), mapGetters({
     // map `this.doneCount` to `this.$store.getters.doneTodosCount`
     doneCount: 'doneTodosCount'
   })),
-  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, mapMutations(['increment', 'incrementBy'])), mapMutations({
+  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, mapMutations(['increment', 'incrementBy', 'getinfo', 'getUsers'])), mapMutations({
     add: 'increment'
   })), mapActions(['increment', 'incrementBy'])), mapActions({
     add: 'increment'
-  }))
+  })),
+  mounted: function mounted() {
+    //    this.getinfo()
+    console.log("dr");
+    this.info = "infolar tinfolar";
+    this.getUsers();
+    this.saveUser;
+  }
 });
 
 /***/ }),
@@ -42161,9 +42187,15 @@ var render = function() {
       0
     ),
     _vm._v(" "),
+    _c("div", [_vm._v(_vm._s(_vm.users))]),
+    _vm._v(" "),
+    _c("span", [_vm._v(_vm._s(_vm.saveUserResponse))]),
+    _vm._v(" "),
     _c("button", { on: { click: _vm.increment } }, [_vm._v("increment")]),
     _vm._v(" "),
-    _c("div", [_vm._v(_vm._s(_vm.count))])
+    _c("div", [_vm._v(_vm._s(_vm.count))]),
+    _vm._v(" "),
+    _c("div", [_vm._v("get info : " + _vm._s(_vm.info))])
   ])
 }
 var staticRenderFns = []
@@ -42195,7 +42227,9 @@ var render = function() {
       _vm._v(" "),
       _c("router-link", { attrs: { to: "/middle/12" } }, [_vm._v("User")]),
       _vm._v(" "),
-      _c("router-view"),
+      _c("router-link", { attrs: { to: "/users" } }, [_vm._v("Get All Users")]),
+      _vm._v(" "),
+      _c("router-link", { attrs: { to: "/saveuser" } }, [_vm._v("Save User")]),
       _vm._v(" "),
       _c("router-view", { attrs: { name: "a" } })
     ],
@@ -91923,6 +91957,20 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/*
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers['crossDomain'] = true;
+window.axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+
+let csrf = document.querySelector('meta[name="csrf-token"]');
+if (csrf) {
+    window.token = csrf.getAttribute('content');
+    window.axios.defaults.headers.common["X-CSRF-TOKEN"] = window.token;
+} else {
+    console.error("CSRF token not found!")
+}
+*/
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
