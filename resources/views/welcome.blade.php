@@ -64,30 +64,23 @@
         </style>
     </head>
     <body>
+    <x-header-menu >slot values</x-header-menu>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
 
-                    <div id="app">
-                        <App> </App>
-                    </div>
-
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                @auth
+                <div id="app">
+                    <App> </App>
+                </div>
+                @else
+                <div id="app">
+                </div>
+
+                @endauth
 <!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
@@ -102,7 +95,9 @@
             </div>
 
         </div>
+    <x-footer-menu />
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </html>
