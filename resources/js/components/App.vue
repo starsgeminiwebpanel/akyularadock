@@ -8,11 +8,8 @@
                         <router-link tag="li" to="/main">Main</router-link>
                     <router-link tag="li" to="/header">header</router-link>
                     <router-view></router-view>
-                       <!-- <passport-clients></passport-clients>
-                        <passport-authorized-clients></passport-authorized-clients>
-                        <passport-personal-access-tokens></passport-personal-access-tokens>
 
-                    -->
+
                     <div class="card-body">
                         I'm an example component.
                     </div>
@@ -23,9 +20,11 @@
 </template>
 
 <script>
+
     export default {
     mounted() {
-    console.log('Component mounted.')
+    console.log('Component mounted.');
+    //this.$store.dispatch('getAccessToken');
 }
     }
 </script>

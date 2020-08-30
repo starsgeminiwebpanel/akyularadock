@@ -75,13 +75,19 @@
                 @auth
                 <div id="app">
                     <App> </App>
+                    <passport-clients></passport-clients>
+                    <passport-authorized-clients></passport-authorized-clients>
+                    <passport-personal-access-tokens></passport-personal-access-tokens>
                 </div>
                 @else
                 <div id="app">
                 </div>
 
                 @endauth
-<!--
+
+
+
+                <!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

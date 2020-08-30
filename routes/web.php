@@ -26,6 +26,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+// Route::post('login', '\Auth\LoginController@login')->middleware('loginaccesstoken');
+
 /*
 Route::prefix('frontsection')->group(function() {
     //Route::get('frontendmain', 'FrontsectionController@index');

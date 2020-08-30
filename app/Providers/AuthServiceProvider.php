@@ -28,6 +28,31 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::routes();
 
+        Passport::tokensExpireIn(now()->addDays(5));
+
+        Passport::refreshTokensExpireIn(now()->addDays(5));
+
+        Passport::personalAccessTokensExpireIn(now()->addMonths(3));
+
+        Passport::cookie('laraakyuCookie');
+
+        Passport::personalAccessClientId(
+            config('passport.personal_access_client.id')
+        );
+
+        Passport::personalAccessClientSecret(
+            config('passport.personal_access_client.secret')
+        );
+
+        Passport::tokensCan([
+            'Generic' => 'Access All Sources',
+            'check-status' => 'Check order status',
+        ]);
+
+        Passport::setDefaultScope([
+            'Generic',
+            'place-orders',
+        ]);
         //
     }
 }

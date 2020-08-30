@@ -17,11 +17,11 @@ import '../../node_modules/vue-material/dist/vue-material.min.css'
 import '../../node_modules/vue-material/dist/theme/default.css'
 import router  from './routes/routes'
 //import './routes/routerGuards'
-
+import store from './stores/stores';
 import 'es6-promise/auto';
 
 //ue.use(VueRouter)
-Vue.use(VueMaterial)
+//Vue.use(VueMaterial)
 //Vue.use(axios)
 window.axios = axios;
 window.axios.defaults.headers.common = {
@@ -40,28 +40,6 @@ window.axios.defaults.headers.common = {
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 // Vue.component('App', require('./components/App.vue').default);
-Vue.config.devtools = true;
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-const moduleVueFiles = require.context('../../Modules', true, /\.vue$/i);
-moduleVueFiles.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], moduleVueFiles(key).default));
-
-
-const app = new Vue({
-    el: '#app',
-    components: { App },
-    router,
-});
-
-/*
-const app  = new Vue({
-  //  router,
-    render: h => h(App)
-}).$mount('#app')
-*/
 
 Vue.component(
     'passport-clients',
@@ -77,3 +55,42 @@ Vue.component(
     'passport-personal-access-tokens',
     require('./components/passport/PersonalAccessTokens.vue').default
 );
+
+
+Vue.config.devtools = true;
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+const moduleVueFiles = require.context('../../Modules', true, /\.vue$/i);
+moduleVueFiles.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], moduleVueFiles(key).default));
+
+
+const app = new Vue({
+    el: '#app',
+    components: { App },
+    store,
+    router,
+});
+
+/*
+const app  = new Vue({
+  //  router,
+    render: h => h(App)
+}).$mount('#app')
+*/
+/*
+const p = {
+    "name" : "gemini",
+    "email" : "artigeministars@gmail.com",
+    "password" : "12345678",
+    "password_confirmation" : "12345678",
+};
+*/
+/*
+axios.post('api/login' ,p,{})
+    .then(response => {
+        console.log(response.data.token);
+    }).catch(error =>{ console.log(error)});
+*/
