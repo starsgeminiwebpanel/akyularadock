@@ -1,4 +1,4 @@
-import { HTTP }  from '../../axios/baseaxios'
+import { HTTP_API }  from '../../axios/baseaxios'
 
 export const doneTodos = state => {
     return state.todos.filter(todo => todo.done)
@@ -16,7 +16,7 @@ export const getTodoById =  (state) => (id) => {
 }
 
 export const saveUser = (state) => {
-    HTTP.post('/users',state.user)
+    HTTP_API.post('/users',state.user)
         .then(res => {
     state.saveUserResponse = res
     console.log(res)

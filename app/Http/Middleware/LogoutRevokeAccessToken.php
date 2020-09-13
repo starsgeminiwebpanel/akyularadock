@@ -20,7 +20,7 @@ class LogoutRevokeAccessToken
         foreach ($currentuser->tokens as $token) {
                $token->revoke();
         }
-
+        // $request->session()->flash('status', 'Logoout Correctly!');
         $response = $next($request);
 
         //$currentuser = Auth::user();

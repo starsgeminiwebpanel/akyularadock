@@ -13,3 +13,7 @@ yarn-error.log
 !/Modules
 !modules_statuses.json
 /laradock/logs/
+composer.lock
+error.log
+package-lock.json
+

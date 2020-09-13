@@ -242,7 +242,7 @@
                             Here is your new client secret. This is the only time it will be shown so don't lose it!
                             You may now use this secret to make API requests.
                         </p>
-
+                        <p v-html="approveDenyBody"></p>
                         <input type="text" class="form-control" v-model="clientSecret">
                     </div>
 
@@ -266,11 +266,13 @@
                 clients: [],
 
                 clientSecret: null,
+                
+                approveDenyBody : null,
 
                 createForm: {
                     errors: [],
                     name: '',
-                    redirect: '',
+                    redirect: 'http://laradock.akyu:8090/tokenCallback',
                     confidential: true
                 },
 
@@ -373,6 +375,19 @@
                 axios[method](uri, form)
                     .then(response => {
                         this.getClients();
+                        let p = {
+                        params : {
+                            client_id : response.data.id,
+                            user_id : response.data.user_id,
+                            client_secret : response.data.plainSecret,
+                            callback_url : response.data.redirect
+                        }
+                        }
+
+                       axios.get('/redirect/',p).then(response => {
+                        this.approveDenyBody = response.data;
+                        
+                       }).catch(error => {console.log(error);}).finally(() => {console.log("finally reached")});
 
                         form.name = '';
                         form.redirect = '';

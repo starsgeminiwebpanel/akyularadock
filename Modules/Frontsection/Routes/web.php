@@ -12,6 +12,7 @@
 */
 
 Route::prefix('frontsection')->group(function() {
+  //  Route::get('/', 'FrontsectionController@index')->middleware('addtokentoheader');
     Route::get('/', 'FrontsectionController@index');
 });
 

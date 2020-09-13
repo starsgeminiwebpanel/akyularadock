@@ -1,5 +1,5 @@
 import mutationTypes from './mutation-types'
-import { HTTP }  from '../../axios/baseaxios'
+import { HTTP_API }  from '../../axios/baseaxios'
 /*
 export const mutationTypes.types.INCREMENT = state => state.count++
 */
@@ -8,7 +8,7 @@ export const getinfo = (state,rootState) => {
 
     console.log("entered")
 
-    HTTP.get('https://api.coindesk.com/v1/bpi/currentprice.json').then(res => {
+    HTTP_API.get('https://api.coindesk.com/v1/bpi/currentprice.json').then(res => {
         state.info = res
         console.log(res)
     }).catch(error => {
@@ -33,11 +33,26 @@ export const getinfo = (state,rootState) => {
 }
 
 export const getUsers = (state,rootState) => {
-    HTTP.get('/users').then(res => {
+    HTTP_API.get('/users').then(res => {
       state.users = res
       console.log(res)
     }).catch(error => {
-        console.log(error)
+        if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+        } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+        }
+        console.log(error.config);
     }).finally(() => {
         console.log("reached finally block!!!")
     })

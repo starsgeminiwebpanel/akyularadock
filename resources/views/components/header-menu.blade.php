@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar
-            <img src="" width="30" height="30" alt="">
+            <img src="{{asset('assets/images/monkey.jpeg')}}" width="30" height="30" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,27 +29,28 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
-                @if (Route::has('login'))
-                <li class="nav-item">
-                    @auth
-                    <a href="{{ url('/home') }}" class="nav-link">Home</a>
-                </li>
 
-                    @else
-                <li class="nav-item">
-                    <a href="{{ route('login') }}" class="nav-link">Login</a>
-                </li>
-
-                    @if (Route::has('register'))
-                <li class="nav-item">
-                <a href="{{ route('register') }}" class="nav-link">Register</a>
-                </li>
-                    @endif
-
-                    @endauth
-
-                @endif
             </ul>
+            @if (Route::has('login'))
+
+                @auth
+                <a href="{{ url('/home') }}" class="nav-link">Home</a>
+
+
+            @else
+
+                <a href="{{ route('login') }}" class="nav-link">Login</a>
+
+
+            @if (Route::has('register'))
+
+                <a href="{{ route('register') }}" class="nav-link">Register</a>
+
+            @endif
+
+            @endauth
+
+            @endif
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

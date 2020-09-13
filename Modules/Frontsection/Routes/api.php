@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/frontsection', function (Request $request) {
     return $request->user();
 });
+//Route::post('/susers', 'API\UserController@store')->middleware('addtokentoheader');
 Route::post('/susers', 'API\UserController@store');
-Route::apiResource('users', 'API\UserController')->middleware('auth:api');
-//Route::apiResource('users', 'API\UserController');
+//Route::apiResource('users', 'API\UserController')->middleware(['auth:api','addtokentoheader']);
+//Route::apiResource('users', 'API\UserController')->middleware(['auth:api']);
+Route::apiResource('users', 'API\UserController');
 
 /*
 Route::group(['middleware' => 'api' ,'namespace' => 'Modules\Frontsection\Http\Controllers'], function () {

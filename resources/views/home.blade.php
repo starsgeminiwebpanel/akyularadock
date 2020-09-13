@@ -12,12 +12,25 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <div class="alert alert-success" role="alert">
+                        {{ session('bearerToken') }}
+                    </div>
+                    ----------------------------
+                    <div class="alert alert-success" role="alert">
+                        {{ session('refreshToken') }}
+                    </div>
+                    ----------------------------
+                    <div class="alert alert-success" role="alert">
+                        {{ session('expiresIn') }}
+                    </div>
                     {{ __('You are logged in!') }}
                     <a href="{{ url('frontsection') }}">Fronsection</a>
                     <a href="{{ url('frontendmain') }}">Front main</a>
                     <a href="{{ url('emptylink') }}">Empty Link</a>
 
+                    <passport-clients></passport-clients>
+                    <passport-authorized-clients></passport-authorized-clients>
+                    <passport-personal-access-tokens></passport-personal-access-tokens>
 
                 </div>
             </div>
@@ -25,3 +38,4 @@
     </div>
 </div>
 @endsection
+

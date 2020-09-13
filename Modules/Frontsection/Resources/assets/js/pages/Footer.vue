@@ -31,7 +31,7 @@
     export default {
     name: 'Footer',
     data: function(){
-          return { localCount: 1, info: null , }
+          return { localCount: 1, info: null , bearerToken: null }
     },
     computed: {
     ...mapState({
@@ -77,6 +77,8 @@
 },
     mounted() {
     //    this.getinfo()
+    console.log("bearerToken")
+    console.log(window.bearerToken)
     console.log("dr")
     this.info = "infolar tinfolar"
     this.getUsers()

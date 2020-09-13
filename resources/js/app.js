@@ -12,13 +12,23 @@ window.Vue = require('vue');
 import App from './components/App.vue'
 import axios from 'axios';
 //import VueRouter from 'vue-router';
-import VueMaterial from 'vue-material';
-import '../../node_modules/vue-material/dist/vue-material.min.css'
-import '../../node_modules/vue-material/dist/theme/default.css'
+//import VueMaterial from 'vue-material';
+//import '../../node_modules/vue-material/dist/vue-material.min.css'
+//import '../../node_modules/vue-material/dist/theme/default.css'
 import router  from './routes/routes'
 //import './routes/routerGuards'
 import store from './stores/stores';
 import 'es6-promise/auto';
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+//import '../sass/custom.scss'
 
 //ue.use(VueRouter)
 //Vue.use(VueMaterial)

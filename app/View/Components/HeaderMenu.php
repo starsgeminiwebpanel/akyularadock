@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
+
 class HeaderMenu extends Component
 {
     /**
@@ -23,6 +24,24 @@ class HeaderMenu extends Component
      */
     public function render()
     {
+       /*
+        if(session()->has('bearerToken') && session()->has('refreshToken') && session()->has('expiresIn')){
+            JavaScript::put([
+                'bearerToken' =>  session()->get('bearerToken'),
+                'refreshToken' => session()->get('refreshToken'),
+                'expiresIn' => session()->get('expiresIn'),
+            ]);
+        }
+        elseif (session()->has('bearerToken')){
+            JavaScript::put([
+                'bearerToken' =>  session()->get('bearerToken'),
+            ]);
+        }else{
+            JavaScript::put([
+                'bearerToken' => 'notFound',
+            ]);
+        }
+       */
         // return function (array $data) {
             // $data['componentName'];
             // $data['attributes'];

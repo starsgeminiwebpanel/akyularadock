@@ -1,6 +1,27 @@
-import axios from 'axios';
 import { EXTERNAL_API_URL , API_URL , BASE_URL } from '../common/config'
+import axiosClient from './AxiosClient'
+import { ApiClient } from './axiosClass'
 
+export let client = new ApiClient(API_URL);
+
+export const  HTTP_API = axiosClient.getClient(API_URL);
+
+export default {
+
+    all() {
+        return client.get('/users');
+    },
+
+    find(userId) {
+        return client.get(`/users/${userId}`);
+    },
+
+    update(userId, data) {
+        return client.put(`/users/${userId}`, data);
+    }
+
+}
+/*
 export const HTTP = axios.create({
     baseURL: API_URL,
     headers: {
@@ -18,6 +39,7 @@ export const HTTP = axios.create({
     },
     timeout: 5000,
 })
+*/
 
 //HTTP.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-HTTP.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+HTTP_API.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
