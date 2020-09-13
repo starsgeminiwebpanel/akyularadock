@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container bg-light">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar
             <img src="{{asset('assets/images/monkey.jpeg')}}" width="30" height="30" alt="">
@@ -32,24 +32,14 @@
 
             </ul>
             @if (Route::has('login'))
-
                 @auth
                 <a href="{{ url('/home') }}" class="nav-link">Home</a>
-
-
             @else
-
                 <a href="{{ route('login') }}" class="nav-link">Login</a>
-
-
             @if (Route::has('register'))
-
                 <a href="{{ route('register') }}" class="nav-link">Register</a>
-
             @endif
-
             @endauth
-
             @endif
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

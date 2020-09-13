@@ -64,10 +64,9 @@
         </style>
     </head>
     <body>
-    <x-header-menu >slot values</x-header-menu>
+    <x-header-menu >Header Menu</x-header-menu>
+    <x-slider-component is-start-up="false" >Slider Area</x-slider-component>
         <div class="flex-center position-ref full-height">
-
-
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -82,9 +81,6 @@
                 </div>
 
                 @endauth
-
-
-
                 <!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

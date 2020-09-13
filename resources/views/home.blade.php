@@ -27,7 +27,16 @@
                     <a href="{{ url('frontsection') }}">Fronsection</a>
                     <a href="{{ url('frontendmain') }}">Front main</a>
                     <a href="{{ url('emptylink') }}">Empty Link</a>
+                    @auth
+                    <div id="app">
+                        <App> </App>
 
+                    </div>
+                    @else
+                    <div id="app">
+                    </div>
+
+                    @endauth
                     <passport-clients></passport-clients>
                     <passport-authorized-clients></passport-authorized-clients>
                     <passport-personal-access-tokens></passport-personal-access-tokens>
