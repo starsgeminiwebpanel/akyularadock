@@ -66,7 +66,8 @@
     <body>
     <x-header-menu >Header Menu</x-header-menu>
     <x-slider-component is-start-up="false" >Slider Area</x-slider-component>
-        <div class="flex-center position-ref full-height">
+    <x-web-panel-props-component></x-web-panel-props-component>
+    <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -95,6 +96,7 @@
             </div>
 
         </div>
+    <x-jum-botron-component></x-jum-botron-component>
     <x-footer-menu />
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>

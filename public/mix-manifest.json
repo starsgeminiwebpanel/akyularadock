@@ -2,5 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/frontsection.js": "/js/frontsection.js",
-    "/css/frontsection.css": "/css/frontsection.css"
+    "/css/frontsection.css": "/css/frontsection.css",
+    "/js/bootstrap-extended.js": "/js/bootstrap-extended.js"
 }

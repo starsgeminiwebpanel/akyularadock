@@ -1,0 +1,28 @@
+.gem-carousel-foreimage {
+    z-index: 1100 !important;
+    position: absolute;
+    top: 10;
+    right: 0;
+    animation: carouseltopbottom ease 5s alternate infinite;
+    animation-delay: 2s;
+}
+
+@keyframes carouseltopbottom {
+        0% {
+            top:0;
+            right:0;
+        }
+        25% {
+            top:20px;
+        }      
+        50% {
+            top:50px;
+        }
+        75% {
+            top:75px;
+        }
+        100% {
+            top:100px;
+        }
+
+}

@@ -17,4 +17,5 @@ require('laravel-mix-merge-manifest');
 mix.mergeManifest();
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .scripts('resources/js/bootstrap-extended.js', 'public/js/bootstrap-extended.js');

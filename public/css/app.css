@@ -1,5 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.gem-carousel-foreimage {
+  z-index: 1100 !important;
+  position: absolute;
+  top: 10;
+  right: 0;
+  -webkit-animation: carouseltopbottom ease 5s alternate infinite;
+          animation: carouseltopbottom ease 5s alternate infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes carouseltopbottom {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  25% {
+    top: 20px;
+  }
+
+  50% {
+    top: 50px;
+  }
+
+  75% {
+    top: 75px;
+  }
+
+  100% {
+    top: 100px;
+  }
+}
+
+@keyframes carouseltopbottom {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  25% {
+    top: 20px;
+  }
+
+  50% {
+    top: 50px;
+  }
+
+  75% {
+    top: 75px;
+  }
+
+  100% {
+    top: 100px;
+  }
+}
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
