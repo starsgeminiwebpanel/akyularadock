@@ -4,16 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class WebPanelPropsComponent extends Component
+class AttributeComponent extends Component
 {
+    public $attributeUrl;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($attributeUrl)
     {
-        //
+        $this->attributeUrl=$attributeUrl;
     }
 
     /**
@@ -23,6 +24,6 @@ class WebPanelPropsComponent extends Component
      */
     public function render()
     {
-        return view('components.web-panel-props-component');
+        return view('components.attribute-component');
     }
 }

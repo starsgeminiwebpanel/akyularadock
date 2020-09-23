@@ -66,7 +66,9 @@
     <body>
     <x-header-menu >Header Menu</x-header-menu>
     <x-slider-component is-start-up="false" >Slider Area</x-slider-component>
-    <x-web-panel-props-component></x-web-panel-props-component>
+    <x-props-component></x-props-component>
+    <x-attributes-component></x-attributes-component>
+    <x-tabs-component></x-tabs-component>
     <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">

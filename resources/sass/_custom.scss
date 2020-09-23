@@ -26,3 +26,33 @@
         }
 
 }
+
+.gem-card-deck-shadow {
+    box-shadow: 2px 2px 2px 2px #709fb0; 
+}
+.gem-card-deck-shadow:hover {
+    box-shadow: 4px 4px 4px 4px #92e4c2;    
+}
+
+.gem-card-group-shadow {
+    box-shadow: 1px 1px 1px 1px #3e978b;
+}
+
+.gem-card-group-shadow:hover {
+    box-shadow: 2px 2px 2px 2px #2ec1ac;
+}
+
+.gem-card-tab-shadow {
+    box-shadow: 2px 2px 2px 2px #44eb76;
+}
+
+.gem-card-tab-shadow:hover {
+    box-shadow: 3px 3px 3px 3px #2aeb63;
+}
+
+.gem-footer-foreground-color-1 { // for bg-info 
+    color: #354145;
+}
+.gem-footer-foreground-color-2 { // for bg-info 
+    color: #24200A;
+}
