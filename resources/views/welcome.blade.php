@@ -63,7 +63,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="gem-front-body-bg-color">
     <x-header-menu >Header Menu</x-header-menu>
     <x-slider-component is-start-up="false" >Slider Area</x-slider-component>
     <x-props-component></x-props-component>

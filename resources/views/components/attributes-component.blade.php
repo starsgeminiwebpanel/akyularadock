@@ -1,4 +1,4 @@
-<div class="container mt-3 gem-card-group-shadow">
+<div class="container mt-5 gem-card-group-shadow">
     <div class="row">
         <div class="card-group">
             <x-attribute-component :attribute-url="asset('assets/images/attributesimages/attributeimage1.jpg')"></x-attribute-component>

@@ -1,5 +1,5 @@
 
-    <div class="card border-info gem-card-deck-shadow flex-column">
+    <div class="card border-info gem-card-deck-shadow flex-column gem-card-deck-item">
         <img src="{{ $imageUrl }}" class="card-img-top" alt="props images">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
