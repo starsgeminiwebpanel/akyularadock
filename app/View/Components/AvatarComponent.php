@@ -8,7 +8,6 @@ class AvatarComponent extends Component
 {
 
     public $avatarUrl;
-    public $brief;
     /**
      * Create a new component instance.
      *

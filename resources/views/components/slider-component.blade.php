@@ -1,5 +1,5 @@
 
-<div>
+<div class="container-fluid d-none d-md-block">
     @if($isStartUp)
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     @else
@@ -103,3 +103,4 @@
 <!-- ends scripts -->
 </div>
 
+</div>
