@@ -14,7 +14,7 @@
         }
         25% {
             top:20px;
-        }      
+        }
         50% {
             top:50px;
         }
@@ -28,10 +28,10 @@
 }
 
 .gem-card-deck-shadow {
-    box-shadow: 2px 2px 2px 2px #709fb0; 
+    box-shadow: 2px 2px 2px 2px #709fb0;
 }
 .gem-card-deck-shadow:hover {
-    box-shadow: 4px 4px 4px 4px #92e4c2;   
+    box-shadow: 4px 4px 4px 4px #92e4c2;
 }
 
 .gem-card-deck-item {
@@ -59,10 +59,10 @@
     box-shadow: 3px 3px 3px 3px #2aeb63;
 }
 
-.gem-footer-foreground-color-1 { // for bg-info 
+.gem-footer-foreground-color-1 { // for bg-info
     color: #354145;
 }
-.gem-footer-foreground-color-2 { // for bg-info 
+.gem-footer-foreground-color-2 { // for bg-info
     color: #24200A;
 }
 
@@ -74,11 +74,11 @@
         vertical-align: middle;
         width: 10em;
         height: 10em;
-        border-radius: 50%;    
+        border-radius: 50%;
         display: inline-block;
         position: relative;
         -webkit-transition: .2s ease;
-         transition: .2s ease;  
+         transition: .2s ease;
 }
 .gem-front-avatar:hover {
     border: 1px solid #3e978b;
@@ -86,7 +86,7 @@
    // margin-left: -10px;
    width:15em;
    height:15em;
-    
+
 }
 /*
 .gem-front-avatar:hover + .gem-front-avatar-pop {
@@ -98,13 +98,13 @@
     padding:0.2em;
     margin:0.1em;
     border-radius: 0.3em;
-    background-color: #24200A; 
+    background-color: #24200A;
     color:#ffffff;
     box-shadow: 1px 1px 1px #2ec1ac;
 }
 
 .gem-front-avatar-pop {
-display:none;  
+display:none;
 }
 */
 // .gem-front-avatar:nth-child(1) { background: blue; }
