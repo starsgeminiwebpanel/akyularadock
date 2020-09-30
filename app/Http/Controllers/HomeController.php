@@ -40,4 +40,8 @@ class HomeController extends Controller
        // return view('home')->with('token',$token);
         return view('home');
         }
+
+        public function generateTokens(){
+        return view('generate-tokens');
+        }
 }

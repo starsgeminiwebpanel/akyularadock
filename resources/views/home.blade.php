@@ -7,40 +7,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <div class="alert alert-success" role="alert">
-                        {{ session('bearerToken') }}
-                    </div>
-                    ----------------------------
-                    <div class="alert alert-success" role="alert">
-                        {{ session('refreshToken') }}
-                    </div>
-                    ----------------------------
-                    <div class="alert alert-success" role="alert">
-                        {{ session('expiresIn') }}
-                    </div>
                     {{ __('You are logged in!') }}
-                    <a href="{{ url('frontsection') }}">Fronsection</a>
-                    <a href="{{ url('frontendmain') }}">Front main</a>
-                    <a href="{{ url('emptylink') }}">Empty Link</a>
-                    @auth
-                    <div id="app">
-                        <App> </App>
-
-                    </div>
-                    @else
-                    <div id="app">
-                    </div>
-
-                    @endauth
-                    <passport-clients></passport-clients>
-                    <passport-authorized-clients></passport-authorized-clients>
-                    <passport-personal-access-tokens></passport-personal-access-tokens>
-
                 </div>
             </div>
         </div>

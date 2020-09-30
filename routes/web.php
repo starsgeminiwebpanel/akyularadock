@@ -94,11 +94,13 @@ Route::get('/tokenCallback', function (Request $request) {
     if(session()->has('bearerToken')
         && session()->has('refreshToken') &&
         session()->has('expiresIn')){
+        /*
         JavaScript::put([
             'bearerToken' =>  $res["access_token"],
             'refreshToken' => $res["refresh_token"],
             'expiresIn' => $res["expires_in"],
         ]);
+        */
     }
 
     return redirect('http://laradock.akyu:8090/home');
@@ -115,3 +117,4 @@ Route::prefix('frontsection')->group(function() {
 */
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 // Route::get('/testindex', 'TestController@index')->name('testindex');
+Route::get('/generateTokens','HomeController@generateTokens');
