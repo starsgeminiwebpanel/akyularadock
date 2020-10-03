@@ -12,8 +12,8 @@ yarn-error.log
 !/laradock
 !/Modules
 !modules_statuses.json
-/laradock/logs/
+/laradock/logs
 composer.lock
-error.log
+/laradock/logs/nginx/error.log
 package-lock.json
 
