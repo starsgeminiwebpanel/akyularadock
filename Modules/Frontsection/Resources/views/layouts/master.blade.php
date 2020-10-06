@@ -7,11 +7,11 @@
         <title>Module Frontsection</title>
 
        {{-- Laravel Mix - CSS File --}}
-       {{-- <link rel="stylesheet" href="{{ mix('css/frontsection.css') }}"> --}}
-
+       <link rel="stylesheet" href="{{ mix('css/frontsection.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
     </head>
     <body>
-        @yield('content')
+        {{-- @yield('content') --}}
 
         {{-- Laravel Mix - JS File --}}
         {{-- <script src="{{ mix('js/frontsection.js') }}"></script> --}}
