@@ -25,9 +25,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 // Install BootstrapVue
-Vue.use(BootstrapVue)
+// Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
+// Vue.use(IconsPlugin)
 //import '../sass/custom.scss'
 
 //ue.use(VueRouter)
