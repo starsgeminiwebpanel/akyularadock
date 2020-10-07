@@ -9,8 +9,6 @@
        {{-- Laravel Mix - CSS File --}}
        <link rel="stylesheet" href="{{ mix('css/frontsection.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     </head>
     <body>
         {{-- @yield('content') --}}
