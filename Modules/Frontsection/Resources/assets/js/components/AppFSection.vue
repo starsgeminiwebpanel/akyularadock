@@ -2,10 +2,26 @@
     <div class="page-container">
         <md-app>
             <md-app-toolbar class="md-primary" md-elevation="0">
+                <div class="md-toolbar-row">
+
                 <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
-            <span class="md-title">My Title</span>
+            <span class="md-title">Gemini DashBoard</span>
+            <div class="md-toolbar-section-end">
+                <md-button class="md-icon-button">
+                    <md-icon>more_vert</md-icon>
+                </md-button>
+            </div>
+              </div>
+            <div class="md-toolbar-row">
+                <md-tabs class="md-primary">
+                    <md-tab id="tab-published" md-label="Published"></md-tab>
+                    <md-tab id="tab-draft" md-label="Draft"></md-tab>
+                    <md-tab id="tab-scheduled" md-label="Scheduled"></md-tab>
+                    <md-tab id="tab-trash" md-label="Trash"></md-tab>
+                </md-tabs>
+            </div>
         </md-app-toolbar>
 
         <md-app-drawer :md-active.sync="menuVisible" md-persistent="mini">
@@ -21,24 +37,39 @@
 
 <md-list>
     <md-list-item>
-        <md-icon>move_to_inbox</md-icon>
-        <span class="md-list-item-text">Inbox</span>
+        <md-icon>pages</md-icon>
+        <span class="md-list-item-text">Pages</span>
     </md-list-item>
 
     <md-list-item>
-        <md-icon>send</md-icon>
-        <span class="md-list-item-text">Sent Mail</span>
+        <md-icon>post_add</md-icon>
+        <span class="md-list-item-text">Posts</span>
     </md-list-item>
 
     <md-list-item>
-        <md-icon>delete</md-icon>
-        <span class="md-list-item-text">Trash</span>
+        <md-icon>category</md-icon>
+        <span class="md-list-item-text">Categories</span>
     </md-list-item>
 
     <md-list-item>
-        <md-icon>error</md-icon>
-        <span class="md-list-item-text">Spam</span>
+        <md-icon>perm_media</md-icon>
+        <span class="md-list-item-text">Medias</span>
     </md-list-item>
+    <md-list-item>
+        <md-icon>library_add</md-icon>
+        <span class="md-list-item-text">Blocks</span>
+    </md-list-item>
+    <md-list-item>
+        <md-icon>table_chart</md-icon>
+        <span class="md-list-item-text">Layouts</span>
+    </md-list-item>
+    <md-list-item>
+        <md-icon>settings_applications</md-icon>
+        <span class="md-list-item-text">Settings</span>
+    </md-list-item>
+
+
+
 </md-list>
 </md-app-drawer>
 
