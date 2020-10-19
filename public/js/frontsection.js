@@ -7474,8 +7474,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AppFSection',
   data: function data() {
@@ -8769,7 +8767,7 @@ var render = function() {
         [
           _c(
             "md-app-toolbar",
-            { staticClass: "md-primary", attrs: { "md-elevation": "0" } },
+            { staticClass: "md-primary", attrs: { "md-elevation": "1" } },
             [
               _c(
                 "div",
@@ -8792,27 +8790,6 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c(
-                    "div",
-                    { staticClass: "md-toolbar-section-end" },
-                    [
-                      _c(
-                        "md-button",
-                        { staticClass: "md-icon-button" },
-                        [_c("md-icon", [_vm._v("more_vert")])],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "md-toolbar-row" },
-                [
-                  _c(
                     "md-tabs",
                     { staticClass: "md-primary" },
                     [
@@ -8831,6 +8808,20 @@ var render = function() {
                       _c("md-tab", {
                         attrs: { id: "tab-trash", "md-label": "Trash" }
                       })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "md-toolbar-section-end" },
+                    [
+                      _c(
+                        "md-button",
+                        { staticClass: "md-icon-button" },
+                        [_c("md-icon", [_vm._v("more_vert")])],
+                        1
+                      )
                     ],
                     1
                   )

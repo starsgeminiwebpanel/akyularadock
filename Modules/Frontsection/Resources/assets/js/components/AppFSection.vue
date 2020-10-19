@@ -1,27 +1,25 @@
 <template>
     <div class="page-container">
         <md-app>
-            <md-app-toolbar class="md-primary" md-elevation="0">
+            <md-app-toolbar class="md-primary" md-elevation="1">
                 <div class="md-toolbar-row">
-
                 <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
             <span class="md-title">Gemini DashBoard</span>
-            <div class="md-toolbar-section-end">
-                <md-button class="md-icon-button">
-                    <md-icon>more_vert</md-icon>
-                </md-button>
-            </div>
-              </div>
-            <div class="md-toolbar-row">
                 <md-tabs class="md-primary">
                     <md-tab id="tab-published" md-label="Published"></md-tab>
                     <md-tab id="tab-draft" md-label="Draft"></md-tab>
                     <md-tab id="tab-scheduled" md-label="Scheduled"></md-tab>
                     <md-tab id="tab-trash" md-label="Trash"></md-tab>
                 </md-tabs>
+                <div class="md-toolbar-section-end">
+                <md-button class="md-icon-button">
+                    <md-icon>more_vert</md-icon>
+                </md-button>
             </div>
+              </div>
+
         </md-app-toolbar>
 
         <md-app-drawer :md-active.sync="menuVisible" md-persistent="mini">
